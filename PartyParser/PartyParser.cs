@@ -22,7 +22,7 @@ namespace monoKrom.PartyParser
         ///<summary>
         ///Request types: Partymeister messages have one of those types
         ///</summary>
-        public enum RequestType { Unknown, Next, Previous, NextHard, PreviousHard, Playlist, GetPlaylist, Seek, SeekHard }
+        public enum RequestType { Unknown, Next, Previous, NextHard, PreviousHard, Playlist, GetPlaylists, Seek, SeekHard }
 
 		XmlDocument xmld = new XmlDocument();
 		
@@ -239,6 +239,7 @@ namespace monoKrom.PartyParser
                 case "next":  return getParameter("hard")=="0"?RequestType.Next:RequestType.NextHard;
                 case "previous": return getParameter("hard") == "0" ? RequestType.Previous : RequestType.PreviousHard;
                 case "seek": return getParameter("hard") == "0" ? RequestType.Seek : RequestType.SeekHard;
+				case "get_playlists": return RequestType.GetPlaylists;
                 default: return RequestType.Unknown;
             }
         }
