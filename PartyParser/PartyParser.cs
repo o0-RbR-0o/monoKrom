@@ -23,7 +23,7 @@ namespace monoKrom.PartyParser
         ///Request types: Partymeister messages have one of those types
         ///</summary>
         public enum RequestType { Unknown, Next, Previous, NextHard, PreviousHard, Playlist, GetPlaylists, Seek, SeekHard }
-        XmlDocument cmld = new XmlDocument();
+        XmlDocument xmld = new XmlDocument();
 
         ///<summary>
         ///A Playlist entry (a slide in most cases)
