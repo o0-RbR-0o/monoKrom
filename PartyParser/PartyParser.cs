@@ -24,7 +24,7 @@ namespace monoKrom.PartyParser
         ///</summary>
         public enum RequestType { Unknown, Next, Previous, NextHard, PreviousHard, Playlist, GetPlaylists, Seek, SeekHard }
 
-		XmlDocument xmld = new XmlDocument();
+        XmlDocument xmld = new XmlDocument();
 		
         ///<summary>
         ///A Playlist entry (a slide in most cases)
@@ -239,7 +239,7 @@ namespace monoKrom.PartyParser
                 case "next":  return getParameter("hard")=="0"?RequestType.Next:RequestType.NextHard;
                 case "previous": return getParameter("hard") == "0" ? RequestType.Previous : RequestType.PreviousHard;
                 case "seek": return getParameter("hard") == "0" ? RequestType.Seek : RequestType.SeekHard;
-				case "get_playlists": return RequestType.GetPlaylists;
+                case "get_playlists": return RequestType.GetPlaylists;
                 default: return RequestType.Unknown;
             }
         }
