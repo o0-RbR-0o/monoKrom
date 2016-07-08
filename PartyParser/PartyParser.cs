@@ -244,7 +244,7 @@ namespace monoKrom.PartyParser
             }
         }
 
-
+         
         ///<summary>
         ///Get all playlist elements with their values in a list. See class PlaylistElement for mor information
         ///</summary>
